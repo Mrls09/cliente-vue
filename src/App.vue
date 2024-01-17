@@ -6,6 +6,16 @@
     <div class="container">
       <div class="sidebar">
         <p>Sidebar</p>
+        <b-nav-item><b-link :to="{ name: 'juguetes-home' }">
+            Tienda de juguetes 
+          </b-link>
+        </b-nav-item>
+
+        <b-nav-item><b-link :to="{ name: 'electrodomesticos-home' }">Tienda de electrodomesticos</b-link>
+        </b-nav-item>
+
+        <b-nav-item><b-link :to="{ name: 'producto' }">Tienda de productos para el hogar</b-link>
+        </b-nav-item>
       </div>
       <div class="content">
         <router-view></router-view>
@@ -48,12 +58,14 @@ export default {
   color: #fff;
   position: fixed;
   left: 0;
-  top: 60px; /* Ajusta según el tamaño de tu navbar */
+  top: 60px;
+  /* Ajusta según el tamaño de tu navbar */
   overflow-y: auto;
 }
 
 .content {
   flex: 1;
   padding: 20px;
+  margin-left: 150px;
 }
 </style>
